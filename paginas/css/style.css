@@ -526,8 +526,20 @@ footer .social a:hover {
 
 /* RESPONSIVEL */
 
+/* @media (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+} */
+
 /* extra large devices: 1200 > computador/telas grandes*/
 @media (min-width: 1200px) {
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .section {
     padding: 10rem 0;
   }
@@ -544,21 +556,32 @@ footer .social a:hover {
   }
 
   nav .menu ul li a.title {
-    font: 400 1rem var(--title-font);
+    font: 400 1rem var(--body-font);
+  }
+
+  nav .icon-icon-menu {
+    display: none;
+  }
+
+  /* HOME */
+
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .image {
+    order: 0;
+  }
+
+  #home .text {
+    order: 1;
   }
 
   main {
     margin-top: var(--header-height);
   }
-}
-
-/*large devices: 1023 > */
+} /*large devices: 1023 > */
 /*large devices: 992 > */
 /* medium devices: 767 > */
-
-@media (min-width: 992px) {
-  :root {
-    --title-font-size: 2.25rem;
-    --subtitle-font-size: 1.125rem;
-  }
-}
