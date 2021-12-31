@@ -18,11 +18,10 @@ for (const link of links) {
 
 //shadow header
 function changeHeaderWhenscroll() {
-
-  const heaer = document.querySelector("#header")
+  const heaer = document.querySelector('#header')
   const navHeight = header.offsetHeight
 
-  if(window.scrollY >= navHeight){
+  if (window.scrollY >= navHeight) {
     header.classList.add('scroll')
   } else {
     header.classList.remove('scroll')
@@ -32,19 +31,24 @@ function changeHeaderWhenscroll() {
 // testimonials carrossel
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
-  pagination:{
+  pagination: {
     el: '.swiper-pagination'
   },
   mousewheel: true,
-  keyboard: true
-
+  keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 })
 
 //back to top
-function backToTop(){
+function backToTop() {
   const backToTopButton = document.querySelector('.back-to-top')
 
-  if(window.scrollY >= 560){
+  if (window.scrollY >= 560) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
@@ -52,7 +56,6 @@ function backToTop(){
 }
 
 //Function When Scroll
-window.addEventListener('scroll', function(){
-  changeHeaderWhenscroll(),
-  backToTop()
+window.addEventListener('scroll', function () {
+  changeHeaderWhenscroll(), backToTop()
 })
