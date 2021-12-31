@@ -526,12 +526,12 @@ footer .social a:hover {
 
 /* RESPONSIVEL */
 
-/* @media (min-width: 992px) {
+/*@media (min-width: 992px) {
   :root {
     --title-font-size: 2.25rem;
     --subtitle-font-size: 1.125rem;
   }
-} */
+}
 
 /* extra large devices: 1200 > computador/telas grandes*/
 @media (min-width: 1200px) {
@@ -541,7 +541,7 @@ footer .social a:hover {
     margin-right: auto;
   }
   .section {
-    padding: 10rem 0;
+    padding: 5rem 0;
   }
 
   nav .menu {
@@ -566,8 +566,10 @@ footer .social a:hover {
   /* HOME */
 
   #home .container {
-    grid-auto-flow: column;
+    max-width: 1290px;
+    grid-template-columns: 60% 40%;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
   }
 
