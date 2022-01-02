@@ -45,9 +45,9 @@ const swiper = new Swiper('.swiper', {
 })
 
 //back to top
-const backToTopButton = document.querySelector('.back-to-top')
 
 function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
   if (window.scrollY >= 560) {
     backToTopButton.classList.add('show')
   } else {
@@ -56,9 +56,9 @@ function backToTop() {
 }
 
 // Ative link pages
-const sections = document.querySelectorAll('main section[id]')
 
 function ativateMenuAtCurrentSection() {
+  const sections = document.querySelectorAll('main section[id]')
   const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
   for (const section of sections) {
